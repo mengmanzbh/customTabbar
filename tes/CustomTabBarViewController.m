@@ -86,10 +86,6 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tabBarController.delegate = self;
-}
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-    NSLog(@"%lu",(unsigned long)tabBarController.selectedIndex);
+   
 }
 @end
