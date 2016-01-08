@@ -15,6 +15,7 @@
 		D5D692FE1C3F4DB0009DA29D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5D692FC1C3F4DB0009DA29D /* LaunchScreen.storyboard */; };
 		D5D693091C3F4DB0009DA29D /* tesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D693081C3F4DB0009DA29D /* tesTests.m */; };
 		D5D693141C3F4DB0009DA29D /* tesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D693131C3F4DB0009DA29D /* tesUITests.m */; };
+		D5D693251C3F537D009DA29D /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D693241C3F537D009DA29D /* CustomTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		D5D6930F1C3F4DB0009DA29D /* tesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5D693131C3F4DB0009DA29D /* tesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tesUITests.m; sourceTree = "<group>"; };
 		D5D693151C3F4DB0009DA29D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5D693231C3F537D009DA29D /* CustomTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
+		D5D693241C3F537D009DA29D /* CustomTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			children = (
 				D5D692F11C3F4DB0009DA29D /* AppDelegate.h */,
 				D5D692F21C3F4DB0009DA29D /* AppDelegate.m */,
+				D5D693231C3F537D009DA29D /* CustomTabBarViewController.h */,
+				D5D693241C3F537D009DA29D /* CustomTabBarViewController.m */,
 				D5D692F41C3F4DB0009DA29D /* ViewController.h */,
 				D5D692F51C3F4DB0009DA29D /* ViewController.m */,
 				D5D692F71C3F4DB0009DA29D /* Main.storyboard */,
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D692F61C3F4DB0009DA29D /* ViewController.m in Sources */,
+				D5D693251C3F537D009DA29D /* CustomTabBarViewController.m in Sources */,
 				D5D692F31C3F4DB0009DA29D /* AppDelegate.m in Sources */,
 				D5D692F01C3F4DB0009DA29D /* main.m in Sources */,
 			);

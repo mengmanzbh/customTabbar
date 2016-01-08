@@ -7,8 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "CustomTabBarViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -16,30 +17,36 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    //a.初始化一个tabBar控制器
+    CustomTabBarViewController *tb=[[CustomTabBarViewController alloc]init];
+    //设置控制器为Window的根控制器
+    tb.delegate = self;
+    self.window.rootViewController=tb;
+    
+    //b.创建子控制器
+    UIViewController *c1=[[UIViewController alloc]init];
+    c1.view.backgroundColor=[UIColor grayColor];
+
+    
+    UIViewController *c2=[[UIViewController alloc]init];
+    c2.view.backgroundColor=[UIColor brownColor];
+    
+    UIViewController *c3=[[UIViewController alloc]init];
+    c3.view.backgroundColor = [UIColor purpleColor];
+
+    UIViewController *c4=[[UIViewController alloc]init];
+    c4.view.backgroundColor = [UIColor yellowColor];
+    
+    tb.viewControllers=@[c1,c2,c3,c4];
+    //2.设置Window为主窗口并显示出来
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSString *tag = [NSString stringWithFormat:@"%lu",(unsigned long)tabBarController.selectedIndex];
+    [[NSNotificationCenter defaultCenter]postNotificationName:@"changestag" object:tag];
 }
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
 @end
